@@ -1,3 +1,4 @@
+import React from 'react';
 import '../scss/Title.scss';
 
 const Title = ({ title, subTitle }) => {
@@ -12,4 +13,4 @@ const Title = ({ title, subTitle }) => {
   );
 };
 
-export default Title;
+export default React.memo(Title);

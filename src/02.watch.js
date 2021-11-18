@@ -10,19 +10,24 @@ const Search = ({ changeQuery }) => {
       e.preventDefault();
       changeQuery(queryRef.current.value);
     },
-    [changeQuery]
+    [changeQuery, queryRef]
   );
-  const onChange = useCallback((e) => {
-    setQuery(e.target.value);
-  }, []);
+  const onChange = useCallback(
+    (e) => {
+      setQuery(e.target.value);
+    },
+    [setQuery]
+  );
   const onClick = useCallback(
     (e) => {
       setQuery('');
       changeQuery('');
-      queryRef.current.focus();
     },
-    [changeQuery]
+    [setQuery, changeQuery]
   );
+  /* useEffect(() => {
+    changeQuery(query);
+  }, [query]); */
   return (
     <form className="search-wrapper" onSubmit={onSubmit}>
       <div className="search-wrap">
