@@ -1,0 +1,16 @@
+@import 'common';
+
+.title-wrapper {
+  padding: 2em 0 1em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px dotted $light-color;
+  .title {
+    color: $primary-color;
+    font-size: 2em;
+    .icon {
+      font-size: 0.75em;
+      color: $info-color;
+      margin-right: 0.5em;
+    }
+  }
+}
