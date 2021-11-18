@@ -5,27 +5,21 @@ import Search from './components/Search';
 import Title from './components/Title';
 
 const App = () => {
-  const photoURL = 'https://jsonplaceholder.typicode.com/photos';
+  const photoURL = 'https://dapi.kakao.com/v2/search/imag';
   const headerTitle = '다찾아 이미지검색';
+  const subTitle = 'feat. Kakao';
   const [allPhoto, setAllPhoto] = useState([]);
   const [searchPhoto, setSearchPhoto] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { data } = await axios.get(photoURL);
-        setAllPhoto(data);
-        setSearchPhoto(data);
-        return () => {};
-      } catch (err) {
-        console.log(err);
-      }
-    };
-    fetchData();
-  }, []);
+
+  const changeQuery = async (value) => {
+    console.log(value);
+    // await axios.get();
+  };
+
   return (
     <div className="container">
-      <Title title={headerTitle} />
-      <Search />
+      <Title title={headerTitle} subTitle={subTitle} />
+      <Search changeQuery={changeQuery} />
     </div>
   );
 };

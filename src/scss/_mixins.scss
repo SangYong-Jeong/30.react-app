@@ -12,6 +12,10 @@
   position: fixed;
 }
 
+@mixin cursor($type: pointer) {
+  cursor: $type;
+}
+
 @mixin layer($p: absolute, $i: auto, $t: auto, $l: auto, $r: auto, $b: auto) {
   position: $p;
   z-index: $i;

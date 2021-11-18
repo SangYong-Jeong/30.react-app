@@ -1,4 +1,20 @@
 @import 'common';
 
 .search-wrapper {
+  @include flex;
+  .search-wrap {
+    flex-grow: 1;
+    @include rel;
+  }
+  .bt-remove {
+    @include cursor;
+    @include layer($t: 50%, $r: 0.5em);
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: darkred;
+  }
+  .bt-submit {
+    flex-shrink: 0;
+    margin-left: 0.5em;
+  }
 }
