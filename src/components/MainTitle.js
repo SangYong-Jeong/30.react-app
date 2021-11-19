@@ -1,7 +1,7 @@
 import React from 'react';
 import '../scss/Title.scss';
 
-const Title = ({ title, subTitle }) => {
+const MainTitle = ({ title, subTitle }) => {
   return (
     <div className="title-wrapper">
       <h1 className="title">
@@ -13,4 +13,4 @@ const Title = ({ title, subTitle }) => {
   );
 };
 
-export default React.memo(Title);
+export default React.memo(MainTitle);

@@ -1,7 +1,7 @@
 import React, { useRef, useState, useCallback } from 'react';
 import '../scss/Search.scss';
 
-const Search = ({ changeQuery }) => {
+const MainSearch = ({ changeQuery }) => {
   const placeholder = '이미지 검색';
   const queryRef = useRef(null);
   const [query, setQuery] = useState('');
@@ -47,4 +47,4 @@ const Search = ({ changeQuery }) => {
   );
 };
 
-export default React.memo(Search);
+export default React.memo(MainSearch);
